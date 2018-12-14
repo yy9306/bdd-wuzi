@@ -1,0 +1,161 @@
+%reset{
+	padding:0;
+	margin:0;
+}
+body{
+	@extend %reset;
+	font-family: '汉仪娃娃篆简';
+}
+ul,li{
+    @extend %reset;
+    list-style: none;
+}
+span{
+	display: block;
+}
+$img-bg : '../images/';
+%center{
+    position: absolute;
+	margin:auto;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+}
+.start{
+	@extend %center;
+	width:100%;
+	height:100%;
+	background: url($img-bg + 'start.jpg') no-repeat;
+	background-position: -60px -10px;
+	z-index: 9999;
+}
+#game{
+	width:50px;
+	height:50px;
+	background: rgba(0,0,0,0.9);
+	color:#fff;
+	border-radius: 50%;
+	position: absolute;
+	right:20px;
+	top:20px;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+}
+.bg{
+    @extend %center;
+    width:100%;
+	height:100%;
+	background: url($img-bg + 'bgone.jpg');
+}
+#left{
+	position: absolute;
+	left:50%;
+	top:140px;
+	margin-left: -600px;
+	width:180px;
+	height:100px;
+	background: url($img-bg + 'girl.jpg') -25px -50px;
+	background-size: 365px 667px;
+}
+#right{
+	position: absolute;
+	left:50%;
+	top:380px;
+	margin-left: -600px;
+	width:180px;
+	height:100px;
+	background: url($img-bg + 'boy.jpg') -35px -485px;
+	background-size: 365px 667px;
+}
+#canvas{
+	@extend %center;
+	z-index: 9;
+}
+#bg{
+    @extend %center;
+	width:600px;
+	height:605px;
+	z-index: 8;
+	background: url($img-bg + 'bg-qipan.jpg') -52px -60px;
+}
+.tip-box{
+	position: absolute;
+	left:0;
+	right:0;
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,0.9);
+	z-index: 99;
+	.tip{
+		position: relative;
+		margin:auto;
+		left:0;
+		right:0;
+		top:10%;
+		width:50%;
+		height:80%;
+		background: #191919;
+		border-radius: 20%;
+		&:hover + .hide{
+            opacity:0;
+		};
+	}
+	.hide{
+        position: absolute;
+        right:10%;
+        top:10%;
+        width:50px;
+        height:50px;
+        border:1px solid #ADADAD;
+        border-radius: 50%;
+        opacity: 1;
+        cursor: pointer;
+        &:after{
+        	content:'❌';
+        	display: block;
+        	color:#fff;
+        	text-align: center;
+        	line-height: 50px;
+        	font-size: 24px;
+        }
+	}
+}
+#success{
+	position: absolute;
+	left:32%;
+	top:60px;
+	width:280px;
+	height:150px;
+	background: url($img-bg + 'success_button.jpg') -250px -480px;
+}
+#save,#goon{
+	position: absolute;
+	left:30%;
+    width:280px;
+    height:70px;
+    cursor: pointer;
+    background: url($img-bg + 'success_button.jpg');
+}
+#goon{
+	bottom:180px;
+	background-position: -250px -650px;
+}
+#save{
+	bottom:60px;
+	background-position: -250px -760px;
+}
+#save-inside{
+	width:50px;
+	height:50px;
+	background: rgba(0,0,0,0.9);
+	color:#fff;
+	border-radius: 50%;
+	position: absolute;
+	right:20px;
+	top:20px;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+}

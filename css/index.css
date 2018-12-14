@@ -1,0 +1,176 @@
+@charset "UTF-8";
+body, ul, li {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: '汉仪娃娃篆简';
+}
+
+ul, li {
+  list-style: none;
+}
+
+span {
+  display: block;
+}
+
+.start, .bg, #canvas, #bg {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.start {
+  width: 100%;
+  height: 100%;
+  background: url("../images/start.jpg") no-repeat;
+  background-position: -60px -10px;
+  z-index: 9999;
+}
+
+#game {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  background: url("../images/bgone.jpg");
+}
+
+#left {
+  position: absolute;
+  left: 50%;
+  top: 140px;
+  margin-left: -600px;
+  width: 180px;
+  height: 100px;
+  background: url("../images/girl.jpg") -25px -50px;
+  background-size: 365px 667px;
+}
+
+#right {
+  position: absolute;
+  left: 50%;
+  top: 380px;
+  margin-left: -600px;
+  width: 180px;
+  height: 100px;
+  background: url("../images/boy.jpg") -35px -485px;
+  background-size: 365px 667px;
+}
+
+#canvas {
+  z-index: 9;
+}
+
+#bg {
+  width: 600px;
+  height: 605px;
+  z-index: 8;
+  background: url("../images/bg-qipan.jpg") -52px -60px;
+}
+
+.tip-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 99;
+}
+
+.tip-box .tip {
+  position: relative;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 10%;
+  width: 50%;
+  height: 80%;
+  background: #191919;
+  border-radius: 20%;
+}
+
+.tip-box .tip:hover + .hide {
+  opacity: 0;
+}
+
+.tip-box .hide {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ADADAD;
+  border-radius: 50%;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.tip-box .hide:after {
+  content: '❌';
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+}
+
+#success {
+  position: absolute;
+  left: 32%;
+  top: 60px;
+  width: 280px;
+  height: 150px;
+  background: url("../images/success_button.jpg") -250px -480px;
+}
+
+#save, #goon {
+  position: absolute;
+  left: 30%;
+  width: 280px;
+  height: 70px;
+  cursor: pointer;
+  background: url("../images/success_button.jpg");
+}
+
+#goon {
+  bottom: 180px;
+  background-position: -250px -650px;
+}
+
+#save {
+  bottom: 60px;
+  background-position: -250px -760px;
+}
+
+#save-inside {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
